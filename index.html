@@ -42,6 +42,31 @@ header a.c{font-weight:500;text-decoration:none;border-bottom:2px solid var(--re
 .lead{color:var(--mute);margin:0 0 32px;max-width:34ch}
 .btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:500;padding:16px 26px}
 
+.r{color:var(--red)}
+@keyframes rise{from{opacity:0;transform:translateY(42px)}to{opacity:1;transform:none}}
+.js:not(.go) .hero .w,.js:not(.go) .hero p,.js:not(.go) .hero .btn{opacity:0}
+.hero .w{display:inline-block}
+.go .hero .w{animation:rise .8s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:calc(var(--i)*90ms + 250ms)}
+.go .hero p{animation:rise .8s cubic-bezier(.2,.7,.2,1) .95s backwards}
+.go .hero .btn{animation:rise .8s cubic-bezier(.2,.7,.2,1) 1.15s backwards}
+@media (prefers-reduced-motion:reduce){.go .hero .w,.go .hero p,.go .hero .btn{animation:none}}
+.row{position:relative}
+.row::after{content:"";position:absolute;top:-1px;left:0;height:2px;width:0;background:var(--red);transition:width 1s cubic-bezier(.2,.7,.2,1) .15s}
+.row.in::after{width:100%}
+#rep{position:fixed;left:24px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--red);color:#fff;font:700 18px "Barlow Condensed",Arial,sans-serif;letter-spacing:.04em;padding:8px 14px;z-index:30;opacity:0;transform:translateY(12px);transition:opacity .3s,transform .3s;pointer-events:none}
+#rep.on{opacity:1;transform:none}
+.btn{transition:background .2s,transform .15s}
+.btn:hover{background:#c40000}
+.btn:active{transform:translateY(1px)}
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+#prog{position:fixed;left:0;top:env(safe-area-inset-top,0px);width:100%;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;z-index:30;pointer-events:none}
+.bar{display:flex;align-items:center;gap:6px;margin-top:16px;padding:10px 14px;background:#1a1a1a;color:#8d8d8a;font-size:12px;border-left:4px solid var(--red)}
+.bar i{display:block;width:9px;height:9px;border-radius:50%;background:#444}
+.bar span{margin-left:8px}
+.bar+.demo{margin-top:0}
+
 /* sections */
 section{padding:88px 0;border-top:1px solid var(--line)}
 h2{font-size:clamp(30px,8vw,46px);margin-bottom:16px}
@@ -160,7 +185,7 @@ section,#top{scroll-margin-top:76px}
 
   <div class="wrap" id="top">
     <div class="hero">
-      <h1 class="d">I build websites for gyms.</h1>
+      <h1 class="d"><span class="w" style="--i:0">I</span> <span class="w" style="--i:1">build</span> <span class="w" style="--i:2">websites</span> <span class="w" style="--i:3">for</span> <span class="w r" style="--i:4">gyms.</span></h1>
       <p>Only websites. No photos, no branding. Built by hand for gym owners across the US.</p>
       <a class="btn" href="#contact">Start your gym's website</a>
     </div>
@@ -172,6 +197,7 @@ section,#top{scroll-margin-top:76px}
         <h3>Iron Haus Strength</h3>
         <span class="m">Austin, TX. Concept, 2026</span>
         <p>A powerlifting gym.</p>
+        <div class="bar"><i></i><i></i><i></i><span>Concept preview</span></div>
         <div class="demo" tabindex="0" aria-label="Scrollable demo of the Iron Haus Strength website"><div class="n"><b>Iron Haus</b><span>Join</span></div><div class="h"><h4>Lift heavy. Train with people who do.</h4><p>A powerlifting gym in Austin.</p><span class="b">Claim a free week</span></div><div class="t"><h5>Classes</h5><div class="l"><span>Barbell Basics</span><span>Mon, Wed 6:00 AM</span></div><div class="l"><span>Meet Prep</span><span>Sat 9:00 AM</span></div><div class="l"><span>Open Platform</span><span>Daily 5 AM to 11 PM</span></div></div><div class="t"><h5>Membership</h5><div class="l"><span>Monthly</span><span>$59</span></div><div class="l"><span>Annual</span><span>$549</span></div><div class="l"><span>Day pass</span><span>$15</span></div></div></div>
         <span class="m">Scroll inside the frame.</span>
       </div>
@@ -179,6 +205,7 @@ section,#top{scroll-margin-top:76px}
         <h3>Forge Athletic Club</h3>
         <span class="m">Denver, CO. Redesign concept, 2026</span>
         <p>A redesign with clear pricing.</p>
+        <div class="bar"><i></i><i></i><i></i><span>Concept preview</span></div>
         <div class="demo lt" tabindex="0" aria-label="Scrollable demo of the Forge Athletic Club website"><div class="n"><b>Forge</b><span>Plans</span></div><div class="h"><h4>Strength training in downtown Denver.</h4><p>A club for people who want a plan, not a crowd.</p><span class="b">Book a tour</span></div><div class="t"><h5>Plans</h5><div class="l"><span>Off-peak</span><span>$49 / month</span></div><div class="l"><span>Full access</span><span>$79 / month</span></div><div class="l"><span>With coaching</span><span>$199 / month</span></div></div><div class="t"><h5>Hours</h5><div class="l"><span>Mon to Fri</span><span>5 AM to 10 PM</span></div><div class="l"><span>Sat and Sun</span><span>7 AM to 6 PM</span></div></div></div>
         <span class="m">Scroll inside the frame.</span>
       </div>
@@ -186,14 +213,15 @@ section,#top{scroll-margin-top:76px}
         <h3>Pulse 24/7</h3>
         <span class="m">Miami, FL. Redesign concept, 2026</span>
         <p>A redesign for a 24-hour chain.</p>
+        <div class="bar"><i></i><i></i><i></i><span>Concept preview</span></div>
         <div class="demo bl" tabindex="0" aria-label="Scrollable demo of the Pulse 24/7 website"><div class="n"><b>Pulse 24/7</b><span>Join</span></div><div class="h"><h4>Open every hour. Join in a minute.</h4><p>Three Miami locations. No contract.</p><span class="b">Join now</span></div><div class="t"><h5>Locations</h5><div class="l"><span>Brickell</span><span>24 hours</span></div><div class="l"><span>Wynwood</span><span>24 hours</span></div><div class="l"><span>Coral Gables</span><span>24 hours</span></div></div><div class="t"><h5>Plans</h5><div class="l"><span>Basic</span><span>$24 / month</span></div><div class="l"><span>Plus, all 3 locations</span><span>$39 / month</span></div></div></div>
         <span class="m">Scroll inside the frame.</span>
       </div>
     </section>
 
     <section id="services">
-      <h2 class="d">Three ways to work</h2>
-      <p class="lead">Every site is built by hand, no templates.</p>
+      <h2 class="d">Three ways to work together</h2>
+      <p class="lead">Every site is built by hand. No templates.</p>
       <div class="row">
         <h3>The Starter</h3>
         <p>One page and a contact form.</p>
@@ -204,13 +232,13 @@ section,#top{scroll-margin-top:76px}
       </div>
       <div class="row">
         <h3>The Membership</h3>
-        <p>Online signup and class booking.</p>
+        <p>Online sign-up and class booking.</p>
       </div>
     </section>
 
     <section id="contact">
       <h2 class="d">Tell me about your gym.</h2>
-      <p class="lead">A few lines is enough. I reply within a day.</p>
+      <p class="lead">A few lines are enough. I reply within a day.</p>
       <a class="mail" href="mailto:baptistepaullaud1@gmail.com">baptistepaullaud1@gmail.com</a>
       <button class="btn" id="open" type="button" aria-expanded="false" aria-controls="msg" style="border:0;font:inherit;font-weight:500;cursor:pointer">Send a message</button>
       <form id="msg" hidden>
@@ -237,7 +265,7 @@ section,#top{scroll-margin-top:76px}
 
   function open(){
     if(open.d)return;open.d=true;done=true;
-    lift.classList.add('open');root.classList.remove('locked');main.removeAttribute('inert');
+    lift.classList.add('open');root.classList.add('go');root.classList.remove('locked');main.removeAttribute('inert');
     window.scrollTo(0,0);
     setTimeout(function(){lift.style.display='none'},900);
   }
@@ -290,6 +318,26 @@ section,#top{scroll-margin-top:76px}
 <script>
 (function(){
   var A='baptistepaullaud1@gmail.com';
+  document.documentElement.classList.add('js');
+  var rv=document.querySelectorAll('.row,.lead,section h2');
+  for(var i=0;i<rv.length;i++)rv[i].classList.add('rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+    for(var j=0;j<rv.length;j++)io.observe(rv[j]);
+  }else{for(var k=0;k<rv.length;k++)rv[k].classList.add('in')}
+  var pg=document.createElement('div');pg.id='prog';document.body.appendChild(pg);
+  var tick=false;var demos=document.querySelectorAll('#work .row');var rep=document.createElement('div');rep.id='rep';document.body.appendChild(rep);
+  addEventListener('scroll',function(){
+    if(tick)return;tick=true;
+    requestAnimationFrame(function(){
+      var h=document.documentElement.scrollHeight-innerHeight;
+      pg.style.transform='scaleX('+(h>0?Math.min(1,scrollY/h):0)+')';
+      var hit=0;
+      for(var d=0;d<demos.length;d++){var r=demos[d].getBoundingClientRect();if(r.top<innerHeight*.5&&r.bottom>innerHeight*.5)hit=d+1}
+      if(hit){rep.textContent='Rep '+hit+' / '+demos.length;rep.classList.add('on')}else{rep.classList.remove('on')}
+      tick=false;
+    });
+  },{passive:true});
   var m=document.getElementById('menu'),b=document.getElementById('burger'),x=document.getElementById('mclose');
   function set(o){m.classList.toggle('on',o);b.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';}
   b.addEventListener('click',function(){set(true)});
