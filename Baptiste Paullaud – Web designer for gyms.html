@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Baptiste Paullaud – Web designer for gyms</title>
+<meta name="description" content="Baptiste Paullaud designs and builds websites for gyms. Only websites, built by hand, no templates.">
+<meta name="author" content="Baptiste Paullaud">
+<meta property="og:title" content="Baptiste Paullaud – Web designer for gyms">
+<meta property="og:description" content="Websites for gyms. Built by hand, no templates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Condensed:wght@300;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b0b;--fg:#f4f4f2;--mute:#8d8d8a;--line:#262626;--red:#e50000;
+  color-scheme:dark;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){--bg:#f3f3f1;--fg:#0b0b0b;--mute:#6b6b68;--line:#d6d6d2;color-scheme:light}
+}
+:root[data-theme="dark"]{--bg:#0b0b0b;--fg:#f4f4f2;--mute:#8d8d8a;--line:#262626}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html.locked,html.locked body{overflow:hidden;height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.55 Barlow,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.d{font-family:"Barlow Condensed","Arial Narrow",Impact,sans-serif;font-weight:700;line-height:1;letter-spacing:0;margin:0}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+
+/* top bar */
+header{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;max-width:760px;margin:0 auto}
+.logo{display:grid;place-items:center;width:44px;height:44px;background:var(--red);color:#fff;font:800 20px "Barlow Condensed",Arial,sans-serif;text-decoration:none;letter-spacing:.02em}
+header a.c{font-weight:500;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:2px}
+
+/* hero */
+.hero{padding:104px 0 120px}
+.hero h1{font-size:clamp(42px,12vw,80px)}
+.hero p{max-width:32ch;margin:24px 0 40px;font-size:18px;color:var(--mute)}
+.lead{color:var(--mute);margin:0 0 32px;max-width:34ch}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:500;padding:16px 26px}
+
+/* sections */
+section{padding:88px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(30px,8vw,46px);margin-bottom:16px}
+.row{display:grid;gap:8px;padding:34px 0;border-top:1px solid var(--line)}
+.row:first-of-type{border-top:0}
+.row h3{font:700 26px/1.1 "Barlow Condensed",Arial,sans-serif;margin:0}
+.row .m{color:var(--mute);font-size:15px}
+.row p{margin:0;max-width:40ch}
+.sig{border-left:4px solid var(--red);padding-left:20px}
+.mail{font:700 clamp(22px,6vw,32px)/1.1 "Barlow Condensed",Arial,sans-serif;word-break:break-all;display:block;margin:24px 0 32px;text-decoration:none}
+footer{padding:36px 0 56px;color:var(--mute);font-size:15px;border-top:1px solid var(--line)}
+
+.demo{height:460px;overflow-y:auto;overscroll-behavior:contain;border-left:4px solid var(--red);margin-top:16px;background:#111;color:#f4f4f2;font-size:15px;line-height:1.45}
+.demo.lt{background:#f4f3ee;color:#111}
+.demo.bl{background:#fff;color:#0a1a4a}
+.demo .n{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;font-weight:500;border-bottom:1px solid rgba(128,128,128,.35);position:sticky;top:0;background:inherit}
+.demo .n b{font:800 22px "Barlow Condensed",Arial,sans-serif}
+.demo .h{padding:44px 20px 40px}
+.demo .h h4{font:700 clamp(32px,9.5vw,46px)/1.05 "Barlow Condensed",Arial,sans-serif;margin:0 0 14px}
+.demo .h p{margin:0 0 22px;max-width:30ch;opacity:.75}
+.demo .b{display:inline-block;padding:12px 18px;background:var(--red);color:#fff;font-weight:500}
+.demo.lt .b{background:#111}
+.demo.bl .b{background:#1b3bff}
+.demo .t{padding:26px 20px;border-top:1px solid rgba(128,128,128,.35)}
+.demo .t h5{font:700 24px/1.1 "Barlow Condensed",Arial,sans-serif;margin:0 0 14px}
+.demo .l{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid rgba(128,128,128,.3)}
+.demo .l span:last-child{opacity:.7;white-space:nowrap}
+
+#main>header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding-top:12px;padding-bottom:12px}
+section,#top{scroll-margin-top:76px}
+.bg{display:flex;align-items:center;gap:14px;height:44px;background:none;border:0;color:var(--fg);font:500 15px Barlow,Arial,sans-serif;cursor:pointer;padding:0 0 0 8px}
+.ln{display:grid;gap:7px;justify-items:end}
+.ln i{display:block;height:3px;background:var(--fg);transition:width .25s}
+.ln i:first-child{width:32px}
+.ln i:last-child{width:18px;background:var(--red)}
+.bg:hover .ln i:last-child,.bg:active .ln i:last-child{width:32px}
+
+#menu{position:fixed;inset:0;z-index:40;background:var(--bg);padding:calc(16px + env(safe-area-inset-top,0px)) 24px calc(24px + env(safe-area-inset-bottom,0px));display:none;flex-direction:column}
+#menu.on{display:flex}
+#menu a{display:flex;align-items:baseline;font:300 clamp(40px,12vw,60px)/1.1 "Barlow Condensed",Arial,sans-serif;letter-spacing:.01em;text-decoration:none;padding:12px 0}
+#menu a::before{content:"—";color:var(--red);margin-right:16px;font-weight:300}
+#menu a:active{color:var(--red)}
+.x{margin-bottom:auto;align-self:flex-end;background:none;border:0;color:var(--fg);font:inherit;font-weight:500;padding:10px 0 24px;cursor:pointer}
+#msg{margin-top:32px;border-left:4px solid var(--red);padding-left:20px}
+#msg label{display:block;font-weight:500;margin-top:18px}
+#msg input,#msg textarea{display:block;width:100%;margin-top:8px;padding:14px;background:transparent;color:var(--fg);border:1px solid var(--line);font:inherit;border-radius:0}
+#msg input:focus,#msg textarea:focus{outline:2px solid var(--red);outline-offset:0}
+#msg .btn{border:0;font:inherit;font-weight:500;cursor:pointer;margin-top:22px}
+.lk{background:none;border:0;color:var(--fg);text-decoration:underline;font:inherit;cursor:pointer;padding:6px}
+
+/* lift intro */
+#lift{position:fixed;inset:0;z-index:50;background:var(--bg);display:flex;flex-direction:column;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  touch-action:none;transition:transform .85s cubic-bezier(.7,0,.2,1)}
+#lift.open{transform:translateY(-100%)}
+#lift header{width:100%}
+#stage{position:relative;flex:1;margin:0 24px 24px;border-bottom:3px solid var(--red)}
+#stage h2{font-size:clamp(38px,11vw,62px);max-width:9ch;position:absolute;top:0;left:0;margin:0}
+#pct{position:absolute;right:0;top:4px;font:800 28px "Barlow Condensed",Arial,sans-serif;color:var(--red);font-variant-numeric:tabular-nums}
+#bar{position:absolute;left:0;right:0;bottom:0;will-change:transform}
+#bar svg{display:block;width:100%;max-width:380px;margin:0 auto;height:auto}
+#hint{position:absolute;left:0;bottom:calc(var(--bh,150px) + 14px);color:var(--mute);font-size:15px;margin:0;transition:opacity .3s}
+#skip{position:absolute;right:24px;bottom:calc(8px + env(safe-area-inset-bottom,0px));background:none;border:0;color:var(--mute);font:inherit;font-size:14px;padding:10px;cursor:pointer;text-decoration:underline}
+@media (prefers-reduced-motion:reduce){#lift{transition:none}}
+</style>
+</head>
+<body>
+
+<div id="lift" role="dialog" aria-label="Intro: scroll quickly to lift the bar">
+  <header><span class="logo">BP</span></header>
+  <div id="stage">
+    <h2 class="d" id="ttl">Lift the bar to enter.</h2>
+    <span id="pct" aria-live="off">0%</span>
+    <p id="hint">Scroll fast to lift it.</p>
+    <div id="bar">
+      <svg viewBox="0 0 360 170" aria-hidden="true">
+        <defs>
+          <linearGradient id="bk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a5a5a"/><stop offset=".22" stop-color="#242424"/><stop offset=".6" stop-color="#0d0d0d"/><stop offset="1" stop-color="#000"/></linearGradient>
+          <linearGradient id="fc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2e2e2e"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient>
+          <pattern id="kn" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="3" height="3" fill="#161616"/><rect width="1" height="3" fill="#5c5c5c"/></pattern>
+          <g id="sd">
+            <rect x="12" y="79" width="98" height="12" rx="2" fill="url(#bk)" stroke="#444" stroke-width=".6"/>
+            <rect x="40" y="8" width="20" height="154" rx="8" fill="url(#bk)" stroke="#4a4a4a" stroke-width=".8"/>
+            <ellipse cx="60" cy="85" rx="7" ry="77" fill="url(#fc)" stroke="#555" stroke-width=".8"/>
+            <ellipse cx="60" cy="85" rx="4.6" ry="62" fill="none" stroke="#3b3b3b" stroke-width="1"/>
+            <ellipse cx="60" cy="85" rx="3" ry="12" fill="#050505" stroke="#666" stroke-width=".8"/>
+            <rect x="62" y="24" width="14" height="122" rx="6" fill="url(#bk)" stroke="#4a4a4a" stroke-width=".8"/>
+            <ellipse cx="76" cy="85" rx="5.5" ry="61" fill="url(#fc)" stroke="#555" stroke-width=".8"/>
+            <ellipse cx="76" cy="85" rx="2.6" ry="10" fill="#050505" stroke="#666" stroke-width=".7"/>
+            <rect x="78" y="40" width="10" height="90" rx="5" fill="url(#bk)" stroke="#4a4a4a" stroke-width=".8"/>
+            <ellipse cx="88" cy="85" rx="4" ry="45" fill="url(#fc)" stroke="#555" stroke-width=".8"/>
+            <rect x="90" y="70" width="14" height="30" rx="3" fill="url(#bk)" stroke="#666" stroke-width=".8"/>
+            <rect x="95" y="70" width="1.5" height="30" fill="#000"/>
+            <circle cx="100" cy="85" r="2.2" fill="#777"/>
+          </g>
+        </defs>
+        <rect x="0" y="81" width="360" height="8" fill="url(#bk)" stroke="#444" stroke-width=".5"/>
+        <rect x="112" y="81" width="136" height="8" fill="url(#kn)"/>
+        <rect x="0" y="82" width="360" height="1" fill="#9a9a9a" opacity=".45"/>
+        <use href="#sd"/>
+        <use href="#sd" transform="translate(360 0) scale(-1 1)"/>
+        <text transform="translate(50 85) rotate(-90)" text-anchor="middle" dominant-baseline="middle" font-family="Barlow Condensed,Arial,sans-serif" font-weight="800" font-size="12" fill="#8a8a8a" letter-spacing="1">45 LB</text>
+        <text transform="translate(310 85) rotate(-90)" text-anchor="middle" dominant-baseline="middle" font-family="Barlow Condensed,Arial,sans-serif" font-weight="800" font-size="12" fill="#8a8a8a" letter-spacing="1">45 LB</text>
+      </svg>
+    </div>
+  </div>
+  <button id="skip" type="button">Skip</button>
+</div>
+
+<main id="main" inert>
+  <header>
+    <a class="logo" href="#top" aria-label="Baptiste Paullaud">BP</a>
+    <button class="bg" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span>Menu</span><span class="ln"><i></i><i></i></span></button>
+    <nav id="menu" aria-label="Menu"><button class="x" id="mclose" type="button" aria-label="Close menu">Close</button><a href="#work">Demo</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <div class="wrap" id="top">
+    <div class="hero">
+      <h1 class="d">I build websites for gyms.</h1>
+      <p>Only websites. No photos, no branding. Built by hand for gym owners across the US.</p>
+      <a class="btn" href="#contact">Start your gym's website</a>
+    </div>
+
+    <section id="work">
+      <h2 class="d">Site demos</h2>
+      <p class="lead">Three concept sites for gyms. Scroll inside each one.</p>
+      <div class="row">
+        <h3>Iron Haus Strength</h3>
+        <span class="m">Austin, TX. Concept, 2026</span>
+        <p>A powerlifting gym.</p>
+        <div class="demo" tabindex="0" aria-label="Scrollable demo of the Iron Haus Strength website"><div class="n"><b>Iron Haus</b><span>Join</span></div><div class="h"><h4>Lift heavy. Train with people who do.</h4><p>A powerlifting gym in Austin.</p><span class="b">Claim a free week</span></div><div class="t"><h5>Classes</h5><div class="l"><span>Barbell Basics</span><span>Mon, Wed 6:00 AM</span></div><div class="l"><span>Meet Prep</span><span>Sat 9:00 AM</span></div><div class="l"><span>Open Platform</span><span>Daily 5 AM to 11 PM</span></div></div><div class="t"><h5>Membership</h5><div class="l"><span>Monthly</span><span>$59</span></div><div class="l"><span>Annual</span><span>$549</span></div><div class="l"><span>Day pass</span><span>$15</span></div></div></div>
+        <span class="m">Scroll inside the frame.</span>
+      </div>
+      <div class="row">
+        <h3>Forge Athletic Club</h3>
+        <span class="m">Denver, CO. Redesign concept, 2026</span>
+        <p>A redesign with clear pricing.</p>
+        <div class="demo lt" tabindex="0" aria-label="Scrollable demo of the Forge Athletic Club website"><div class="n"><b>Forge</b><span>Plans</span></div><div class="h"><h4>Strength training in downtown Denver.</h4><p>A club for people who want a plan, not a crowd.</p><span class="b">Book a tour</span></div><div class="t"><h5>Plans</h5><div class="l"><span>Off-peak</span><span>$49 / month</span></div><div class="l"><span>Full access</span><span>$79 / month</span></div><div class="l"><span>With coaching</span><span>$199 / month</span></div></div><div class="t"><h5>Hours</h5><div class="l"><span>Mon to Fri</span><span>5 AM to 10 PM</span></div><div class="l"><span>Sat and Sun</span><span>7 AM to 6 PM</span></div></div></div>
+        <span class="m">Scroll inside the frame.</span>
+      </div>
+      <div class="row">
+        <h3>Pulse 24/7</h3>
+        <span class="m">Miami, FL. Redesign concept, 2026</span>
+        <p>A redesign for a 24-hour chain.</p>
+        <div class="demo bl" tabindex="0" aria-label="Scrollable demo of the Pulse 24/7 website"><div class="n"><b>Pulse 24/7</b><span>Join</span></div><div class="h"><h4>Open every hour. Join in a minute.</h4><p>Three Miami locations. No contract.</p><span class="b">Join now</span></div><div class="t"><h5>Locations</h5><div class="l"><span>Brickell</span><span>24 hours</span></div><div class="l"><span>Wynwood</span><span>24 hours</span></div><div class="l"><span>Coral Gables</span><span>24 hours</span></div></div><div class="t"><h5>Plans</h5><div class="l"><span>Basic</span><span>$24 / month</span></div><div class="l"><span>Plus, all 3 locations</span><span>$39 / month</span></div></div></div>
+        <span class="m">Scroll inside the frame.</span>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2 class="d">Three ways to work</h2>
+      <p class="lead">Every site is built by hand, no templates.</p>
+      <div class="row">
+        <h3>The Starter</h3>
+        <p>One page and a contact form.</p>
+      </div>
+      <div class="row sig">
+        <h3>The Signature</h3>
+        <p>Up to 5 pages and a class schedule.</p>
+      </div>
+      <div class="row">
+        <h3>The Membership</h3>
+        <p>Online signup and class booking.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="d">Tell me about your gym.</h2>
+      <p class="lead">A few lines is enough. I reply within a day.</p>
+      <a class="mail" href="mailto:baptistepaullaud1@gmail.com">baptistepaullaud1@gmail.com</a>
+      <button class="btn" id="open" type="button" aria-expanded="false" aria-controls="msg" style="border:0;font:inherit;font-weight:500;cursor:pointer">Send a message</button>
+      <form id="msg" hidden>
+        <p class="m" style="margin:0">Write to <strong>baptistepaullaud1@gmail.com</strong> <button class="lk" id="copy" type="button">Copy</button></p>
+        <label>Your name<input name="n" required autocomplete="name"></label>
+        <label>Your email<input name="e" type="email" required autocomplete="email"></label>
+        <label>Message<textarea name="t" rows="5" required></textarea></label>
+        <button class="btn" type="submit">Send</button>
+        <p class="m" id="ok" role="status"></p>
+      </form>
+    </section>
+
+    <footer>© 2026 Baptiste Paullaud. Handmade, no templates.</footer>
+  </div>
+</main>
+
+<script>
+(function(){
+  var root=document.documentElement,lift=document.getElementById('lift'),main=document.getElementById('main'),
+      stage=document.getElementById('stage'),bar=document.getElementById('bar'),ttl=document.getElementById('ttl'),
+      pct=document.getElementById('pct'),hint=document.getElementById('hint'),skip=document.getElementById('skip');
+  var p=0,shown=0,done=false,last=performance.now(),travel=0,top0=0;
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function open(){
+    if(open.d)return;open.d=true;done=true;
+    lift.classList.add('open');root.classList.remove('locked');main.removeAttribute('inert');
+    window.scrollTo(0,0);
+    setTimeout(function(){lift.style.display='none'},900);
+  }
+  if(reduce){open();return}
+  root.classList.add('locked');
+
+  function measure(){
+    var bh=bar.offsetHeight;
+    stage.style.setProperty('--bh',bh+'px');
+    top0=ttl.offsetHeight+16;
+    travel=Math.max(0,stage.clientHeight-bh-top0);
+  }
+  measure();addEventListener('resize',measure);
+
+  function add(d){if(!done)p=Math.min(1,p+Math.abs(d)*0.0026)}
+  addEventListener('wheel',function(e){if(done)return;e.preventDefault();add(e.deltaY)},{passive:false});
+  var ty=0;
+  addEventListener('touchstart',function(e){ty=e.touches[0].clientY},{passive:true});
+  addEventListener('touchmove',function(e){
+    if(done)return;e.preventDefault();
+    var y=e.touches[0].clientY;add(y-ty);ty=y;
+  },{passive:false});
+  addEventListener('keydown',function(e){
+    if(done)return;
+    if(' ArrowDown PageDown ArrowUp PageUp '.indexOf(' '+e.key+' ')>-1&&e.target!==skip){e.preventDefault();add(110)}
+  });
+  skip.addEventListener('click',open);
+
+  function frame(now){
+    var dt=Math.min(.05,(now-last)/1000);last=now;
+    if(!done){
+      p=Math.max(0,p-0.1*dt);
+      shown+=(p-shown)*0.25;
+      var sx=(p>0.02&&p<1)?(Math.random()-.5)*7*p:0;
+      bar.style.transform='translate3d('+sx.toFixed(1)+'px,'+(-shown*travel).toFixed(1)+'px,0)';
+      pct.textContent=Math.round(shown*100)+'%';
+      hint.style.opacity=p>0.04?0:1;
+      if(p>=0.97){
+        done=true;ttl.textContent='Locked out.';pct.textContent='100%';
+        bar.style.transform='translate3d(0,'+(-travel)+'px,0)';
+        setTimeout(function(){open.d=false;open()},550);
+        return;
+      }
+      requestAnimationFrame(frame);
+    }
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+<script>
+(function(){
+  var A='baptistepaullaud1@gmail.com';
+  var m=document.getElementById('menu'),b=document.getElementById('burger'),x=document.getElementById('mclose');
+  function set(o){m.classList.toggle('on',o);b.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';}
+  b.addEventListener('click',function(){set(true)});
+  x.addEventListener('click',function(){set(false)});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A')set(false)});
+  addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+  var f=document.getElementById('msg'),o=document.getElementById('open'),ok=document.getElementById('ok'),cp=document.getElementById('copy');
+  o.addEventListener('click',function(){var s=f.hidden;f.hidden=!s;o.setAttribute('aria-expanded',String(s));if(s)f.querySelector('input').focus()});
+  cp.addEventListener('click',function(){
+    try{navigator.clipboard.writeText(A).then(function(){cp.textContent='Copied'},function(){cp.textContent=A})}catch(e){cp.textContent=A}
+  });
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d=new FormData(f);
+    var body='Hi Baptiste,\n\n'+d.get('t')+'\n\nName: '+d.get('n')+'\nEmail: '+d.get('e');
+    var a=document.createElement('a');
+    a.href='mailto:'+A+'?subject='+encodeURIComponent('Website for my gym')+'&body='+encodeURIComponent(body);
+    a.target='_blank';a.rel='noopener';
+    document.body.appendChild(a);a.click();a.remove();
+    ok.textContent='Your mail app is opening with the message ready. Press send there. If nothing opens, copy the email address above.';
+  });
+})();
+</script>
+</body>
+</html>
