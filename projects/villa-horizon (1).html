@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Villa Horizon</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0f2238;color:#e8edf3;font:17px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit}
+.h{position:sticky;top:0;z-index:6;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:#0f2238}
+.h b{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#d1a85f}
+.b{position:relative;width:44px;height:44px;background:none;border:0;cursor:pointer;padding:0}
+.b i{position:absolute;right:8px;height:2px;background:#d1a85f;border-radius:2px;transition:transform .35s,width .3s,opacity .25s,top .35s}
+.b i:nth-child(1){top:14px;width:28px}.b i:nth-child(2){top:21px;width:20px}.b i:nth-child(3){top:28px;width:12px}
+.b:hover i:nth-child(3){width:28px}
+.o .b i{width:26px}.o .b i:nth-child(1){top:21px;transform:rotate(45deg)}.o .b i:nth-child(2){opacity:0}.o .b i:nth-child(3){top:21px;transform:rotate(-45deg)}
+.m{position:fixed;top:56px;left:12px;right:12px;z-index:5;background:#e8eef5;color:#10233a;padding:8px 20px;display:block;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .3s,transform .3s,visibility .3s;box-shadow:0 12px 30px rgba(0,0,0,.4)}.o .m{opacity:1;visibility:visible;transform:none}
+.m a{display:block;text-decoration:none;padding:14px 0;border-bottom:1px solid #c2cfdd;font-size:18px}.m a:last-child{border:0}
+.c{text-align:center;padding:90px 24px 70px}.c i{display:block;width:1px;height:50px;background:#d1a85f;margin:0 auto 24px}
+h1{font-weight:400;font-size:36px;line-height:1.2;margin:0 0 16px}.c p{max-width:24em;margin:0 auto 24px;color:#aab8c8}
+.btn{display:inline-block;background:#d1a85f;color:#0f2238;padding:13px 24px;text-decoration:none;border:0;font:inherit;font-size:16px;cursor:pointer}
+.vl{padding:52px 24px;border-top:1px solid #26405e}.vl:nth-of-type(even){text-align:right}
+.vl b{display:block;font-size:76px;line-height:1;font-weight:200;color:transparent;-webkit-text-stroke:1px #d1a85f}
+.vl h2{font-weight:400;font-size:27px;margin:6px 0}.vl small{display:block;color:#aab8c8;font-size:15px}.vl em{display:block;font-style:normal;color:#d1a85f;font-size:22px;margin-top:10px}
+.st{background:#e8eef5;color:#10233a;text-align:center;padding:70px 28px}.st p{font-size:25px;line-height:1.35;max-width:16em;margin:0 auto}
+.sv{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #26405e}.sv div{padding:26px 20px;border-bottom:1px solid #26405e}.sv div:nth-child(odd){border-right:1px solid #26405e}.sv h3{margin:0 0 6px;font-size:17px;color:#d1a85f;font-weight:500}.sv p{margin:0;font-size:15px;color:#aab8c8}
+.ar{padding:50px 24px}.ar h2{font-weight:400;font-size:24px;margin:0 0 14px}.ar ul{list-style:none;padding:0;margin:0}.ar li{padding:12px 0;border-top:1px solid #26405e}.ar li b{font-weight:500;color:#d1a85f}
+dl{margin:0;padding:0 24px 50px}dt{font-weight:600;margin-top:20px}dd{margin:4px 0 0;color:#aab8c8}
+.f{background:#e8eef5;color:#10233a;padding:60px 28px;text-align:center}.f h2{font-weight:400;font-size:27px;margin:0 0 8px}
+input,textarea{width:100%;max-width:420px;display:block;margin:0 auto 10px;padding:12px;border:1px solid #9fb2c6;background:#fff;font:inherit}
+footer{padding:26px;text-align:center;font-size:14px;color:#8aa0b8}
+.ph{background:#26405e;overflow:hidden}.ph img{display:block;width:100%;height:100%;object-fit:cover}
+.dg{aspect-ratio:16/10;clip-path:polygon(0 0,100% 9%,100% 100%,0 100%);margin-top:-10px}
+.pair{position:relative;height:350px;margin:0 auto 34px;max-width:380px}.pair .ph{position:absolute;width:62%}
+.pair .p1{left:0;top:0;aspect-ratio:4/5;transform:rotate(-2deg)}.pair .p2{right:0;bottom:0;aspect-ratio:1;transform:rotate(2.5deg);border:6px solid #e8eef5}
+</style></head><body>
+<header class="h"><b>Villa Horizon</b><button class="b" aria-label="Menu"><i></i><i></i><i></i></button></header>
+<nav class="m"><a href="#v">The villas</a><a href="#s">Our service</a><a href="#z">Where we work</a><a href="#q">Questions</a><a href="#c">Request a viewing</a></nav>
+<section class="c"><i></i><h1>Villas on the<br>French Riviera.</h1><p>Private houses between Cannes and Théoule-sur-Mer. We list few, and we visit each one first.</p><a class="btn" href="#v">See the villas</a></section><div class="ph dg"><img src="https://images.unsplash.com/photo-1698653223783-d6cce8281606?auto=format&fit=crop&w=1000&q=70" alt="A villa pool with palm trees" loading="lazy" onerror="this.remove()"></div>
+<div id="v"><section class="vl"><b>01</b><h2>Villa Cap Roux</h2><small>Théoule-sur-Mer · 6 bedrooms · 380 m² · sea view</small><em>€6,200,000</em></section>
+<section class="vl"><b>02</b><h2>Mas des Pins</h2><small>Mougins · 5 bedrooms · 310 m² · pool and olive grove</small><em>€3,900,000</em></section>
+<section class="vl"><b>03</b><h2>Villa Bellevue</h2><small>Cannes · 4 bedrooms · 260 m² · ten minutes from the port</small><em>€5,300,000</em></section>
+<section class="vl"><b>04</b><h2>La Bastide</h2><small>Mouans-Sartoux · 7 bedrooms · 450 m² · 8,000 m² of land</small><em>€4,450,000</em></section></div>
+<section class="st"><div class="pair"><div class="ph p1"><img src="https://images.unsplash.com/photo-1561405458-c8ddc4a4b495?auto=format&fit=crop&w=1000&q=70" alt="The Mediterranean sea" loading="lazy" onerror="this.remove()"></div><div class="ph p2"><img src="https://images.unsplash.com/photo-1760261131012-f63e216ecdb9?auto=format&fit=crop&w=1000&q=70" alt="A courtyard with a pool" loading="lazy" onerror="this.remove()"></div></div><p>We list few houses, and we visit every one before we do.</p></section>
+<div class="sv" id="s"><div><h3>Private viewings</h3><p>One house at a time. No other buyers there.</p></div><div><h3>Legal help</h3><p>Two local notaries and an English-speaking lawyer.</p></div><div><h3>Settling in</h3><p>Insurance, gardener, pool: names we use ourselves.</p></div><div><h3>Rentals</h3><p>We find tenants for the weeks you are away.</p></div></div>
+<section class="ar" id="z"><h2>Where we work</h2><ul><li><b>Cannes.</b> Quiet hills above the town, close to everything.</li><li><b>Mougins.</b> Old village, golf courses, more privacy.</li><li><b>Théoule.</b> Red cliffs and houses built into the slope.</li></ul></section>
+<dl id="q"><dt>Do I need to come in person?</dt><dd>For the first visit, yes. After that most of it can be done remotely.</dd><dt>What are the buying costs?</dt><dd>Around 7 to 8 percent on top of the price. We give the exact figure before you offer.</dd><dt>Can I buy through a company?</dt><dd>Often yes. The notary explains the options.</dd></dl>
+<section class="f" id="c"><h2>Request a viewing</h2><p style="margin:0 0 20px">3 avenue du Soleil, Cannes · 04 93 00 45 67</p>
+<form onsubmit="this.innerHTML='<p>Thank you. We will contact you within a day.</p>';return false"><input placeholder="Your name" required><input type="email" placeholder="Your email" required><textarea rows="3" placeholder="Which villa would you like to see?"></textarea><button class="btn">Send request</button></form></section>
+<footer>© Villa Horizon · Concept demo</footer>
+<script>var B=document.querySelector('.b');B.onclick=function(){document.body.classList.toggle('o')};document.querySelectorAll('.m a').forEach(function(a){a.onclick=function(){document.body.classList.remove('o')}})</script>
+</body></html>
