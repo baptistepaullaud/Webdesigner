@@ -1,62 +1,48 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Riviera Prestige · Villas on the French Riviera</title><meta name="description" content="A curated collection of sea-view villas, bastides and penthouses between Cannes and Cap d’Antibes."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet"><style>:root{--bg:#0d1621;--s:#132130;--s2:#1b2d40;--acc:#d9bf8c;--txt:#e8edf2;--mute:#93a4b6;--g1:#2f5a7a;--g2:#0f1d2b;--hf:"DM Serif Display"}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--txt);font:400 1rem/1.7 'Manrope',system-ui,sans-serif;padding:14px clamp(14px,2.2vw,28px) 90px;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:var(--hf),Georgia,serif;font-weight:500;line-height:1.08}
-.nv{position:sticky;top:12px;z-index:10;display:flex;align-items:center;gap:1.6rem;width:max-content;max-width:100%;margin:0 auto 18px;padding:.45rem .45rem .45rem 1.6rem;border-radius:99px;background:color-mix(in srgb,var(--s) 82%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 10px 40px rgba(0,0,0,.35)}
-.nv b{font:500 1.2rem var(--hf),Georgia,serif;white-space:nowrap}
-.nv nav{display:flex;gap:1.4rem;font-size:.9rem;color:var(--mute)}.nv nav a:hover{color:var(--txt)}
-.cta{display:inline-block;padding:.85rem 1.6rem;border-radius:99px;background:var(--acc);color:var(--bg);font-weight:700;font-size:.92rem;transition:transform .3s,box-shadow .3s}
-.cta:hover{transform:translateY(-2px);box-shadow:0 12px 28px color-mix(in srgb,var(--acc) 35%,transparent)}.nv .cta{padding:.65rem 1.2rem}
-.fr{border-radius:48px;background:var(--s);padding:clamp(2rem,6vw,5.5rem);margin-bottom:18px}
-.fr h2{font-size:clamp(2rem,4vw,3.3rem);max-width:34rem;margin-bottom:3rem}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;background:radial-gradient(60% 80% at 80% 40%,color-mix(in srgb,var(--acc) 14%,transparent),transparent 70%),var(--s)}
-.k{color:var(--acc);font-size:.92rem;margin-bottom:1.2rem}
-.hero h1{font-size:clamp(2.6rem,5.6vw,4.8rem);margin-bottom:1.6rem}
-.lead{color:var(--mute);max-width:30rem;margin-bottom:2.2rem;font-size:1.08rem}
-.orbw{position:relative;width:min(100%,460px);margin-left:auto}
-.orb,.ph{position:relative;overflow:hidden;background:linear-gradient(170deg,var(--g1),var(--g2))}
-.orb{aspect-ratio:1;border-radius:50%;box-shadow:0 0 0 16px color-mix(in srgb,var(--acc) 8%,transparent)}
-svg{position:absolute;inset:0;width:100%;height:100%;display:block}
-svg .d{fill:rgba(6,10,10,.82)}svg .m{fill:rgba(255,255,255,.12)}svg .w{fill:var(--acc);opacity:.92}svg .o{fill:var(--acc);opacity:.28}svg .sea{fill:rgba(255,255,255,.1)}svg .ln{stroke:var(--acc);fill:none;stroke-width:2;opacity:.3}
-.badge{position:absolute;left:-1.2rem;bottom:2rem;width:112px;aspect-ratio:1;border-radius:50%;background:var(--acc);color:var(--bg);display:grid;place-items:center;text-align:center;font:700 .82rem/1.25 'Manrope',sans-serif;box-shadow:0 12px 30px rgba(0,0,0,.35)}
-.g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
-.p{background:var(--s2);border-radius:40px;padding:1rem 1rem 1.8rem;transition:transform .4s}.p:hover{transform:translateY(-6px)}
-.ph{aspect-ratio:4/5;border-radius:999px 999px 28px 28px;margin-bottom:1.3rem}
-.p:nth-child(2) .ph svg{transform:scaleX(-1)}.p:nth-child(3) .ph svg{transform:scale(1.3);transform-origin:50% 100%}
-.p h3{font-size:1.5rem;padding:0 .8rem}.p span{display:block;color:var(--mute);font-size:.9rem;padding:0 .8rem}
-.p b{display:inline-block;margin:1rem .8rem 0;padding:.35rem 1rem;border-radius:99px;background:color-mix(in srgb,var(--acc) 16%,transparent);color:var(--acc);font-size:.95rem}
-.two{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
-.two .orb{width:min(100%,400px)}.two .orb svg{transform:scale(1.15) scaleX(-1);transform-origin:50% 100%}
-.two h2{margin-bottom:1.4rem}.two p{color:var(--mute);margin-bottom:2.2rem;max-width:34rem}
-.cs{display:flex;gap:1rem;flex-wrap:wrap}
-.c{width:132px;aspect-ratio:1;border-radius:50%;background:var(--s2);display:grid;place-content:center;text-align:center;padding:.6rem;line-height:1.25}
-.c strong{display:block;font:500 1.35rem var(--hf),Georgia,serif;color:var(--acc)}.c span{font-size:.75rem;color:var(--mute)}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
-.st{padding:2.2rem;border-radius:36px;background:var(--s2)}
-.n{width:48px;aspect-ratio:1;border-radius:50%;background:var(--acc);color:var(--bg);display:grid;place-items:center;font-weight:700;margin-bottom:1.4rem}
-.st h3{font-size:1.4rem;margin-bottom:.6rem}.st p{color:var(--mute);font-size:.95rem}
-.q{display:flex;gap:1.6rem;align-items:center;flex-wrap:wrap}
-.av{flex:none;width:84px;aspect-ratio:1;border-radius:50%;background:var(--acc);color:var(--bg);display:grid;place-items:center;font:500 1.6rem var(--hf),Georgia,serif}
-.bub{flex:1;min-width:240px;padding:2rem 2.4rem;border-radius:40px 40px 40px 8px;background:var(--s2)}
-.bub p{font:500 clamp(1.2rem,2.4vw,1.7rem)/1.35 var(--hf),Georgia,serif;margin-bottom:.8rem}.bub span{color:var(--mute);font-size:.9rem}
-.ct{text-align:center;background:radial-gradient(50% 90% at 50% 100%,color-mix(in srgb,var(--acc) 16%,transparent),transparent 70%),var(--s)}
-.fr.ct h2{margin:0 auto 1.6rem;max-width:30rem}
-.pills{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.2rem}
-.pills span{padding:.6rem 1.2rem;border-radius:99px;background:var(--s2);color:var(--mute);font-size:.92rem}
-footer{text-align:center;color:var(--mute);font-size:.82rem;padding:1.4rem 1rem 0}
-.back{position:fixed;left:1rem;bottom:1rem;z-index:20;padding:.7rem 1.2rem;border-radius:99px;background:rgba(8,12,12,.85);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#e8e8e8;font-size:.85rem}
-@media(max-width:860px){.nv nav{display:none}.hero,.two{grid-template-columns:1fr}.orbw{margin:0 auto}.g,.steps{grid-template-columns:1fr}.fr{border-radius:32px}.badge{left:0}.two .orb{margin:0 auto}}</style></head><body>
-<header class="nv"><b>Riviera Prestige</b><nav><a href="#collection">Collection</a><a href="#agency">Agency</a><a href="#contact">Contact</a></nav><a class="cta" href="#contact">Book a villa viewing</a></header>
-<main>
-<section class="fr hero"><div><p class="k">Villas & penthouses · Côte d’Azur</p><h1>Live facing the sea</h1><p class="lead">A curated collection of sea-view villas, bastides and penthouses between Cannes and Cap d’Antibes.</p><a class="cta" href="#collection">Discover the collection</a></div><div class="orbw"><div class="orb" role="img" aria-label="Illustration of a property"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><circle class="o" cx="90" cy="80" r="40"/><rect class="sea" y="190" width="400" height="110"/><path class="ln" d="M0 205H400M0 222H400"/><path class="d" d="M40 300V210H360V300Z"/><rect class="d" x="70" y="170" width="200" height="40" rx="6"/><rect class="d" x="50" y="160" width="240" height="10" rx="5"/><g class="w"><rect x="90" y="176" width="70" height="28" rx="4"/><rect x="180" y="176" width="70" height="28" rx="4" style="opacity:.45"/><rect x="70" y="228" width="120" height="30" rx="4"/><rect x="210" y="228" width="120" height="30" rx="4" style="opacity:.6"/></g></svg></div><div class="badge">Since<br>2012</div></div></section>
-<section class="fr" id="collection"><h2>The sea-view collection</h2><div class="g"><article class="p"><div class="ph" style="--g1:#2f5a7a;--g2:#0f1d2b"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><circle class="o" cx="90" cy="80" r="40"/><rect class="sea" y="190" width="400" height="110"/><path class="ln" d="M0 205H400M0 222H400"/><path class="d" d="M40 300V210H360V300Z"/><rect class="d" x="70" y="170" width="200" height="40" rx="6"/><rect class="d" x="50" y="160" width="240" height="10" rx="5"/><g class="w"><rect x="90" y="176" width="70" height="28" rx="4"/><rect x="180" y="176" width="70" height="28" rx="4" style="opacity:.45"/><rect x="70" y="228" width="120" height="30" rx="4"/><rect x="210" y="228" width="120" height="30" rx="4" style="opacity:.6"/></g></svg></div><h3>Villa Aurore</h3><span>Cap d’Antibes · 7 bedrooms · 820 m²</span><b>€ 28,500,000</b></article><article class="p"><div class="ph" style="--g1:#3b6a8a;--g2:#102232"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><circle class="o" cx="90" cy="80" r="40"/><rect class="sea" y="190" width="400" height="110"/><path class="ln" d="M0 205H400M0 222H400"/><path class="d" d="M40 300V210H360V300Z"/><rect class="d" x="70" y="170" width="200" height="40" rx="6"/><rect class="d" x="50" y="160" width="240" height="10" rx="5"/><g class="w"><rect x="90" y="176" width="70" height="28" rx="4"/><rect x="180" y="176" width="70" height="28" rx="4" style="opacity:.45"/><rect x="70" y="228" width="120" height="30" rx="4"/><rect x="210" y="228" width="120" height="30" rx="4" style="opacity:.6"/></g></svg></div><h3>Bastide des Pins</h3><span>Mougins · 5 bedrooms · 460 m²</span><b>€ 7,200,000</b></article><article class="p"><div class="ph" style="--g1:#294f6c;--g2:#0d1a27"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><circle class="o" cx="90" cy="80" r="40"/><rect class="sea" y="190" width="400" height="110"/><path class="ln" d="M0 205H400M0 222H400"/><path class="d" d="M40 300V210H360V300Z"/><rect class="d" x="70" y="170" width="200" height="40" rx="6"/><rect class="d" x="50" y="160" width="240" height="10" rx="5"/><g class="w"><rect x="90" y="176" width="70" height="28" rx="4"/><rect x="180" y="176" width="70" height="28" rx="4" style="opacity:.45"/><rect x="70" y="228" width="120" height="30" rx="4"/><rect x="210" y="228" width="120" height="30" rx="4" style="opacity:.6"/></g></svg></div><h3>Penthouse Croisette</h3><span>Cannes · 3 bedrooms · 250 m²</span><b>€ 6,900,000</b></article></div></section>
-<section class="fr two" id="agency"><div class="orb" role="img" aria-label="Illustration of a property"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><circle class="o" cx="90" cy="80" r="40"/><rect class="sea" y="190" width="400" height="110"/><path class="ln" d="M0 205H400M0 222H400"/><path class="d" d="M40 300V210H360V300Z"/><rect class="d" x="70" y="170" width="200" height="40" rx="6"/><rect class="d" x="50" y="160" width="240" height="10" rx="5"/><g class="w"><rect x="90" y="176" width="70" height="28" rx="4"/><rect x="180" y="176" width="70" height="28" rx="4" style="opacity:.45"/><rect x="70" y="228" width="120" height="30" rx="4"/><rect x="210" y="228" width="120" height="30" rx="4" style="opacity:.6"/></g></svg></div><div><h2>Sea views, handled end to end</h2><p>From Cap d’Antibes to Cannes, we pair buyers with villas that deliver the view in the brochure. Our team stays on call day and night, from the first visit to the day you collect the keys.</p><div class="cs"><div class="c"><div><strong>14</strong><span>years</span></div></div><div class="c"><div><strong>24 h</strong><span>concierge</span></div></div><div class="c"><div><strong>60+</strong><span>sea-view sales</span></div></div></div></div></section>
-<section class="fr"><h2>How it works</h2><div class="steps"><div class="st"><div class="n">1</div><h3>Find the view</h3><p>A short list built around light, orientation and privacy.</p></div><div class="st"><div class="n">2</div><h3>Visit in comfort</h3><p>Chauffeured viewings with a concierge who knows every address.</p></div><div class="st"><div class="n">3</div><h3>Settle in</h3><p>Staff, security and furnishing arranged before you arrive.</p></div></div></section>
-<section class="fr"><div class="q"><div class="av">J</div><div class="bub"><p>“Three viewings, one weekend, and the keys within the month. Effortless.”</p><span>J. & K., buyers, Cap d’Antibes</span></div></div></section>
-<section class="fr ct" id="contact"><h2>Viewings by appointment, seven days a week</h2><div class="pills"><span>8 boulevard de la Croisette, 06400 Cannes</span><span>+33 4 00 00 00 00</span><span>hello@riviera-prestige.fr</span></div><a class="cta" href="mailto:hello@riviera-prestige.fr">Book a villa viewing</a></section>
-</main>
-<footer>Concept website created for a portfolio. The agency and the properties shown are fictional.</footer>
-<!-- Delete the link below once the site is live on its own domain -->
-<a class="back" href="https://baptistepaullaud.github.io/Webdesigner/#projets">← Back to portfolio</a>
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riviera Prestige</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0f2238;color:#e8edf3;font:17px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit}
+.h{position:sticky;top:0;z-index:6;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:#0f2238}
+.h b{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#d1a85f}
+.b{position:relative;width:44px;height:44px;background:none;border:0;cursor:pointer;padding:0}
+.b i{position:absolute;right:8px;height:2px;background:#d1a85f;border-radius:2px;transition:transform .35s,width .3s,opacity .25s,top .35s}
+.b i:nth-child(1){top:14px;width:28px}.b i:nth-child(2){top:21px;width:20px}.b i:nth-child(3){top:28px;width:12px}
+.b:hover i:nth-child(3){width:28px}
+.o .b i{width:26px}.o .b i:nth-child(1){top:21px;transform:rotate(45deg)}.o .b i:nth-child(2){opacity:0}.o .b i:nth-child(3){top:21px;transform:rotate(-45deg)}
+.m{position:fixed;top:56px;left:12px;right:12px;z-index:5;background:#e8eef5;color:#10233a;padding:8px 20px;display:block;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .3s,transform .3s,visibility .3s;box-shadow:0 12px 30px rgba(0,0,0,.4)}.o .m{opacity:1;visibility:visible;transform:none}
+.m a{display:block;text-decoration:none;padding:14px 0;border-bottom:1px solid #c2cfdd;font-size:18px}.m a:last-child{border:0}
+.c{text-align:center;padding:90px 24px 70px}.c i{display:block;width:1px;height:50px;background:#d1a85f;margin:0 auto 24px}
+h1{font-weight:400;font-size:36px;line-height:1.2;margin:0 0 16px}.c p{max-width:24em;margin:0 auto 24px;color:#aab8c8}
+.btn{display:inline-block;background:#d1a85f;color:#0f2238;padding:13px 24px;text-decoration:none;border:0;font:inherit;font-size:16px;cursor:pointer}
+.vl{padding:52px 24px;border-top:1px solid #26405e}.vl:nth-of-type(even){text-align:right}
+.vl b{display:block;font-size:76px;line-height:1;font-weight:200;color:transparent;-webkit-text-stroke:1px #d1a85f}
+.vl h2{font-weight:400;font-size:27px;margin:6px 0}.vl small{display:block;color:#aab8c8;font-size:15px}.vl em{display:block;font-style:normal;color:#d1a85f;font-size:22px;margin-top:10px}
+.st{background:#e8eef5;color:#10233a;text-align:center;padding:70px 28px}.st p{font-size:25px;line-height:1.35;max-width:16em;margin:0 auto}
+.sv{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #26405e}.sv div{padding:26px 20px;border-bottom:1px solid #26405e}.sv div:nth-child(odd){border-right:1px solid #26405e}.sv h3{margin:0 0 6px;font-size:17px;color:#d1a85f;font-weight:500}.sv p{margin:0;font-size:15px;color:#aab8c8}
+.ar{padding:50px 24px}.ar h2{font-weight:400;font-size:24px;margin:0 0 14px}.ar ul{list-style:none;padding:0;margin:0}.ar li{padding:12px 0;border-top:1px solid #26405e}.ar li b{font-weight:500;color:#d1a85f}
+dl{margin:0;padding:0 24px 50px}dt{font-weight:600;margin-top:20px}dd{margin:4px 0 0;color:#aab8c8}
+.f{background:#e8eef5;color:#10233a;padding:60px 28px;text-align:center}.f h2{font-weight:400;font-size:27px;margin:0 0 8px}
+input,textarea{width:100%;max-width:420px;display:block;margin:0 auto 10px;padding:12px;border:1px solid #9fb2c6;background:#fff;font:inherit}
+footer{padding:26px;text-align:center;font-size:14px;color:#8aa0b8}
+.ph{background:#26405e;overflow:hidden}.ph img{display:block;width:100%;height:100%;object-fit:cover}
+.dg{aspect-ratio:16/10;clip-path:polygon(0 0,100% 9%,100% 100%,0 100%);margin-top:-10px}
+.pair{position:relative;height:350px;margin:0 auto 34px;max-width:380px}.pair .ph{position:absolute;width:62%}
+.pair .p1{left:0;top:0;aspect-ratio:4/5;transform:rotate(-2deg)}.pair .p2{right:0;bottom:0;aspect-ratio:1;transform:rotate(2.5deg);border:6px solid #e8eef5}
+</style></head><body>
+<header class="h"><b>Riviera Prestige</b><button class="b" aria-label="Menu"><i></i><i></i><i></i></button></header>
+<nav class="m"><a href="#v">The villas</a><a href="#s">Our service</a><a href="#z">Where we work</a><a href="#q">Questions</a><a href="#c">Request a viewing</a></nav>
+<section class="c"><i></i><h1>Villas on the<br>French Riviera.</h1><p>Private houses between Cannes and Théoule-sur-Mer. We list few, and we visit each one first.</p><a class="btn" href="#v">See the villas</a></section><div class="ph dg"><img src="https://images.unsplash.com/photo-1698653223783-d6cce8281606?auto=format&fit=crop&w=1000&q=70" alt="A villa pool with palm trees" loading="lazy" onerror="this.remove()"></div>
+<div id="v"><section class="vl"><b>01</b><h2>Villa Cap Roux</h2><small>Théoule-sur-Mer · 6 bedrooms · 380 m² · sea view</small><em>€6,200,000</em></section>
+<section class="vl"><b>02</b><h2>Mas des Pins</h2><small>Mougins · 5 bedrooms · 310 m² · pool and olive grove</small><em>€3,900,000</em></section>
+<section class="vl"><b>03</b><h2>Villa Bellevue</h2><small>Cannes · 4 bedrooms · 260 m² · ten minutes from the port</small><em>€5,300,000</em></section>
+<section class="vl"><b>04</b><h2>La Bastide</h2><small>Mouans-Sartoux · 7 bedrooms · 450 m² · 8,000 m² of land</small><em>€4,450,000</em></section></div>
+<section class="st"><div class="pair"><div class="ph p1"><img src="https://images.unsplash.com/photo-1561405458-c8ddc4a4b495?auto=format&fit=crop&w=1000&q=70" alt="The Mediterranean sea" loading="lazy" onerror="this.remove()"></div><div class="ph p2"><img src="https://images.unsplash.com/photo-1760261131012-f63e216ecdb9?auto=format&fit=crop&w=1000&q=70" alt="A courtyard with a pool" loading="lazy" onerror="this.remove()"></div></div><p>We list few houses, and we visit every one before we do.</p></section>
+<div class="sv" id="s"><div><h3>Private viewings</h3><p>One house at a time. No other buyers there.</p></div><div><h3>Legal help</h3><p>Two local notaries and an English-speaking lawyer.</p></div><div><h3>Settling in</h3><p>Insurance, gardener, pool: names we use ourselves.</p></div><div><h3>Rentals</h3><p>We find tenants for the weeks you are away.</p></div></div>
+<section class="ar" id="z"><h2>Where we work</h2><ul><li><b>Cannes.</b> Quiet hills above the town, close to everything.</li><li><b>Mougins.</b> Old village, golf courses, more privacy.</li><li><b>Théoule.</b> Red cliffs and houses built into the slope.</li></ul></section>
+<dl id="q"><dt>Do I need to come in person?</dt><dd>For the first visit, yes. After that most of it can be done remotely.</dd><dt>What are the buying costs?</dt><dd>Around 7 to 8 percent on top of the price. We give the exact figure before you offer.</dd><dt>Can I buy through a company?</dt><dd>Often yes. The notary explains the options.</dd></dl>
+<section class="f" id="c"><h2>Request a viewing</h2><p style="margin:0 0 20px">3 avenue du Soleil, Cannes · 04 93 00 45 67</p>
+<form onsubmit="this.innerHTML='<p>Thank you. We will contact you within a day.</p>';return false"><input placeholder="Your name" required><input type="email" placeholder="Your email" required><textarea rows="3" placeholder="Which villa would you like to see?"></textarea><button class="btn">Send request</button></form></section>
+<footer>© Riviera Prestige · Concept demo</footer>
+<script>var B=document.querySelector('.b');B.onclick=function(){document.body.classList.toggle('o')};document.querySelectorAll('.m a').forEach(function(a){a.onclick=function(){document.body.classList.remove('o')}})</script>
 </body></html>
