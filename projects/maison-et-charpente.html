@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Maison &amp; Charpente · General contractors, Savannah, Georgia</title>
+<meta name="description" content="Family-run general contractor building new homes, renovations and extensions in Savannah, Georgia.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f4efe6;--ink:#1c2330;--mute:#5d6470;--brass:#a77b3b;--line:#d9d1c1;--card:#fbf8f2;--s:"Fraunces",Georgia,serif;--f:Inter,system-ui,sans-serif;--pad:clamp(1.25rem,5vw,4.5rem)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--f);-webkit-font-smoothing:antialiased}
+body.lock{overflow:hidden}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+h1,h2,h3{font-family:var(--s);font-weight:500;line-height:1.1;letter-spacing:-.015em}
+.wrap{padding:0 var(--pad)}section{padding:clamp(3.5rem,8vw,7rem) var(--pad)}
+.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);font-weight:600;margin-bottom:1rem}
+.btn{display:inline-block;padding:.95rem 1.7rem;background:var(--ink);color:var(--bg);font-weight:500;font-size:.95rem;border:0;cursor:pointer;transition:background .25s}
+.btn:hover{background:var(--brass)}.btn.alt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}.btn.alt:hover{background:var(--ink);color:var(--bg)}
+header{position:sticky;top:0;z-index:60;display:flex;justify-content:space-between;align-items:center;padding:1rem var(--pad);background:rgba(244,239,230,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.logo{font:600 1.35rem var(--s);letter-spacing:-.01em}.logo span{color:var(--brass)}
+.burger{width:48px;height:48px;border-radius:50%;border:1.5px solid currentColor;background:none;cursor:pointer;position:relative;transition:color .4s}
+.burger i{position:absolute;left:14px;width:18px;height:1.5px;background:currentColor;transition:transform .45s cubic-bezier(.7,0,.2,1),top .45s}
+.burger i:nth-child(1){top:19px}.burger i:nth-child(2){top:27px}
+.open .burger{color:var(--bg)}.open .burger i:nth-child(1){top:23px;transform:rotate(45deg)}.open .burger i:nth-child(2){top:23px;transform:rotate(-45deg)}
+.menu{position:fixed;inset:0;z-index:55;background:var(--ink);color:var(--bg);display:grid;grid-template-columns:1fr;align-content:center;padding:6rem var(--pad) 3rem;transform:translateY(-100%);visibility:hidden;transition:transform .7s cubic-bezier(.7,0,.2,1),visibility 0s .7s}
+.open .menu{transform:none;visibility:visible;transition:transform .7s cubic-bezier(.7,0,.2,1)}
+.open header{background:transparent;border-color:transparent;position:fixed;inset:0 0 auto 0}.open .logo{color:var(--bg)}
+.menu nav a{display:flex;gap:1.2rem;align-items:baseline;font:500 clamp(2rem,7vw,4.2rem) var(--s);padding:.5rem 0;border-bottom:1px solid rgba(244,239,230,.14);opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s,color .2s}
+.menu nav a small{font:500 .8rem var(--f);color:var(--brass);letter-spacing:.1em}.menu nav a:hover{color:var(--brass)}
+.open .menu nav a{opacity:1;transform:none}.open .menu nav a:nth-child(1){transition-delay:.25s}.open .menu nav a:nth-child(2){transition-delay:.31s}.open .menu nav a:nth-child(3){transition-delay:.37s}.open .menu nav a:nth-child(4){transition-delay:.43s}.open .menu nav a:nth-child(5){transition-delay:.49s}
+.menu p{margin-top:2rem;color:#a9adb5;font-size:.95rem}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center;padding-top:clamp(3rem,6vw,5.5rem)}
+.hero h1{font-size:clamp(2.6rem,6.2vw,5.2rem);margin-bottom:1.4rem}.hero p{max-width:34em;color:var(--mute);font-size:1.08rem;margin-bottom:2rem}.hero .cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.art{background:var(--card);border:1px solid var(--line);aspect-ratio:4/3.1;display:grid;place-items:center}.art svg{width:92%;height:auto}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 var(--pad)}
+.stats div{padding:1.8rem 1.2rem;border-left:1px solid var(--line)}.stats div:first-child{border-left:0;padding-left:0}
+.stats b{display:block;font:500 2.4rem var(--s)}.stats span{color:var(--mute);font-size:.9rem}
+.head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:2.5rem;flex-wrap:wrap}.head h2{font-size:clamp(2rem,4.2vw,3.3rem);max-width:15em}.head p{max-width:26em;color:var(--mute)}
+.srv{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.srv article{background:var(--card);padding:2.2rem 1.8rem}.srv h3{font-size:1.55rem;margin:.6rem 0 .7rem}.srv p{color:var(--mute)}.srv .n{font:500 .85rem var(--f);color:var(--brass)}
+.work{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.work figure .art{aspect-ratio:4/3;margin-bottom:.9rem}.work b{font:500 1.25rem var(--s);display:block}.work span{color:var(--mute);font-size:.92rem}
+.dark{background:var(--ink);color:var(--bg)}.dark .eyebrow{color:#cfa55e}.dark .head p,.dark li p{color:#a9adb5}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;list-style:none}
+.steps li{border-top:1px solid rgba(244,239,230,.25);padding-top:1.2rem}.steps b{font:500 1.4rem var(--s);display:block;margin:.4rem 0}.steps .n{color:#cfa55e;font-size:.85rem;font-weight:600}
+blockquote{font:400 clamp(1.5rem,3vw,2.3rem)/1.3 var(--s);max-width:26em}cite{display:block;margin-top:1.4rem;font:500 .95rem var(--f);color:var(--mute);font-style:normal}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem)}
+.contact h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:1rem}.contact dl{margin-top:2rem;display:grid;gap:1rem}.contact dt{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);font-weight:600}
+form{display:grid;gap:.9rem}input,textarea{width:100%;padding:.9rem 1rem;border:1px solid var(--ink);background:transparent}input::placeholder,textarea::placeholder{color:#8a8f98}
+#ok{display:none;color:var(--brass);font-weight:600}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;padding:1.6rem var(--pad);border-top:1px solid var(--line);font-size:.88rem;color:var(--mute)}
+@media(max-width:860px){.hero,.contact{grid-template-columns:1fr}.srv,.work{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(3){border-left:0;padding-left:0}.stats div:nth-child(n+3){border-top:1px solid var(--line)}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="h1" viewBox="0 0 400 300"><g fill="none" stroke="#1c2330" stroke-width="2" stroke-linejoin="round"><path d="M20 262H380"/><path d="M60 262V138H340V262"/><path d="M40 142L200 52L360 142"/><path d="M290 108V66H316V120"/><rect x="92" y="170" width="52" height="56"/><rect x="256" y="170" width="52" height="56"/><rect x="172" y="186" width="56" height="76"/><path d="M118 170V226M92 198H144M282 170V226M256 198H308"/><circle cx="200" cy="112" r="14"/></g><path d="M40 142L200 52L360 142Z" fill="#a77b3b" opacity=".16"/></symbol>
+<symbol id="h2" viewBox="0 0 400 300"><g fill="none" stroke="#1c2330" stroke-width="2" stroke-linejoin="round"><path d="M20 262H380"/><path d="M50 262V120H210V262"/><path d="M210 262V176H350V262"/><path d="M40 120H220M50 120L130 74L210 120"/><path d="M210 176H360"/><rect x="82" y="152" width="44" height="50"/><rect x="138" y="152" width="44" height="50"/><rect x="236" y="206" width="90" height="56"/><path d="M281 206V262"/></g><rect x="210" y="176" width="140" height="86" fill="#a77b3b" opacity=".16"/></symbol>
+<symbol id="h3" viewBox="0 0 400 300"><g fill="none" stroke="#1c2330" stroke-width="2" stroke-linejoin="round"><path d="M20 262H380"/><path d="M70 262V158H330V262"/><path d="M50 162L200 96L350 162"/><path d="M50 162H350"/><path d="M92 262V190M130 262V190M168 262V190M206 262V190M244 262V190M282 262V190M308 262V190"/><path d="M80 190H320"/><rect x="104" y="206" width="30" height="56"/></g><path d="M50 162L200 96L350 162Z" fill="#a77b3b" opacity=".16"/></symbol>
+</defs></svg>
+<header><a class="logo" href="#top">Maison <span>&amp;</span> Charpente</a><button class="burger" id="bg" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button></header>
+<div class="menu" id="menu"><nav><a href="#services"><small>01</small>Services</a><a href="#work"><small>02</small>Projects</a><a href="#process"><small>03</small>How we work</a><a href="#about"><small>04</small>Clients</a><a href="#contact"><small>05</small>Contact</a></nav><p>(912) 555-0142 · hello@maisoncharpente.example</p></div>
+<main id="top">
+<section class="hero"><div><p class="eyebrow">General contractors · Savannah, Georgia</p><h1>Homes built to last, delivered on time.</h1><p>Maison &amp; Charpente is a family-run building company. New builds, renovations and extensions, managed by one site manager from the first drawing to the final walkthrough.</p><div class="cta"><a class="btn" href="#contact">Book a site visit</a><a class="btn alt" href="#work">See our projects</a></div></div><div class="art"><svg viewBox="0 0 400 300" role="img" aria-label="Elevation drawing of a house"><use href="#h1"/></svg></div></section>
+<div class="stats"><div><b>28</b><span>years building in Chatham County</span></div><div><b>340+</b><span>homes completed</span></div><div><b>10 yr</b><span>structural warranty</span></div><div><b>4.9/5</b><span>average client rating</span></div></div>
+<section id="services"><div class="head"><div><p class="eyebrow">What we build</p><h2>One crew for the whole job</h2></div><p>No hand-offs between trades. The people who pour your foundation are the people who hand you the keys.</p></div>
+<div class="srv"><article><span class="n">01</span><h3>New homes</h3><p>Custom houses from foundation to roof, drawn with your architect or ours and built to a fixed schedule.</p></article><article><span class="n">02</span><h3>Renovations</h3><p>Structural repairs, full interior renovations and careful restoration of period houses.</p></article><article><span class="n">03</span><h3>Extensions</h3><p>Additions, second storeys and garage conversions that match the house they join.</p></article></div></section>
+<section id="work" style="padding-top:0"><div class="head"><div><p class="eyebrow">Selected projects</p><h2>Recent work around the city</h2></div></div>
+<div class="work"><figure><div class="art"><svg viewBox="0 0 400 300" role="img" aria-label="Drawing"><use href="#h2"/></svg></div><b>Oak Street residence</b><span>Full renovation and rear extension</span></figure><figure><div class="art"><svg viewBox="0 0 400 300" role="img" aria-label="Drawing"><use href="#h3"/></svg></div><b>Tybee Island cottage</b><span>New build on pilings</span></figure><figure><div class="art"><svg viewBox="0 0 400 300" role="img" aria-label="Drawing"><use href="#h1"/></svg></div><b>Bull Street townhouse</b><span>Structural repair and restoration</span></figure></div></section>
+<section class="dark" id="process"><div class="head"><div><p class="eyebrow">How we work</p><h2>Four steps, no surprises</h2></div><p>You get a fixed quote before we start, and a single point of contact until the day we leave.</p></div>
+<ol class="steps"><li><span class="n">01</span><b>Site visit</b><p>We walk the property, survey the structure and listen to what you need.</p></li><li><span class="n">02</span><b>Plan and quote</b><p>Drawings, permits and a fixed price in writing.</p></li><li><span class="n">03</span><b>Build</b><p>One site manager, weekly updates and a clean site every evening.</p></li><li><span class="n">04</span><b>Handover</b><p>A joint walkthrough, then ten years of structural warranty.</p></li></ol></section>
+<section id="about"><p class="eyebrow">Clients</p><blockquote>They finished two days early and left the site cleaner than they found it. We would hire them again tomorrow.</blockquote><cite>Dana R. · Oak Street renovation</cite></section>
+<section id="contact" class="contact" style="border-top:1px solid var(--line)"><div><p class="eyebrow">Contact</p><h2>Tell us about your project</h2><p style="color:var(--mute)">We reply within two working days and book a free site visit.</p><dl><div><dt>Phone</dt><dd>(912) 555-0142</dd></div><div><dt>Office</dt><dd>214 Abercorn Street, Savannah, GA</dd></div><div><dt>Hours</dt><dd>Mon to Fri, 7:30 am to 5 pm</dd></div></dl></div>
+<form id="f"><input type="text" placeholder="Full name" required><input type="email" placeholder="Email" required><input type="text" placeholder="Property address"><textarea rows="5" placeholder="What would you like to build or change?"></textarea><button class="btn" type="submit">Send request</button><span id="ok">Thank you. This is a demo form, nothing was sent.</span></form></section>
+</main>
+<footer><span>© Maison &amp; Charpente · Licensed and insured · Savannah, Georgia</span><span>Demo website by Baptiste Paullaud</span></footer>
+<script>
+var d=document.documentElement,b=document.getElementById('bg');
+function t(o){d.classList.toggle('open',o);document.body.classList.toggle('lock',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu')}
+b.onclick=function(){t(!d.classList.contains('open'))};
+document.querySelectorAll('.menu a').forEach(function(a){a.onclick=function(){t(false)}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')t(false)});
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();document.getElementById('ok').style.display='block'});
+</script></body></html>
